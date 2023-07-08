@@ -19,7 +19,7 @@
   "content_scripts": [
     {
       "css": ["styles/styles.css"],
-      "matches": ["https://signin.aws.amazon.com/saml","file:///C:/Temp/Amazon%20Web%20Services%20Sign-In.html","file:///C:/Temp/Amazon%20Web%20Services%20Sign-In.html-no-changes.html"],
+      "matches": ["https://signin.aws.amazon.com/saml"],
       "js":["lib/jquery-3.6.2.min.js","content/script.js"],
       "run_at": "document_idle"
       
