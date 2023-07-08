@@ -4,6 +4,12 @@ This extension is a forked version of the awesome "[samltoawsstskeys](https://gi
 
 The inspiration from "samltoawsstskeys" motivated me to develop "samltoawsstskeys-mp" specifically for Google Chrome to save keys for multiple profiles with name profiles and much more.
 
+![Alt text](images/options-mp.png "Options")
+
+![Alt text](images/options1-mp.png "Options")
+
+![Alt text](images/login-page-enhancements.png "Login Page Enhancements")
+
 # Donation
 
 * If you appreciate the work I've done on "samltoawsstskeys-mp" and it has been helpful to you, I kindly ask that you consider donating to help those in need especially the ones that need food here at [UN World Food Programme](https://www.wfp.org/) . I'm fortunate and don't require any donations myself. Let's make a difference together!
