@@ -1,4 +1,15 @@
-# SAML to AWS STS Keys Conversion
+# SAML to AWS STS Keys Conversion - Multi Profile (mp)
+
+This extension is a forked version of the awesome "[samltoawsstskeys](https://github.com/prolane/samltoawsstskeys)" project by "prolane." I want to express my sincere gratitude to the original author for their incredible idea and hard work!
+
+The inspiration from "samltoawsstskeys" motivated me to develop "samltoawsstskeys-mp" specifically for Google Chrome to save keys for multiple profiles with name profiles and much more.
+
+# Donation
+
+* If you appreciate the work I've done on "samltoawsstskeys-mp" and it has been helpful to you, I kindly ask that you consider donating to help those in need especially the ones that need food here at [UN World Food Programme](https://www.wfp.org/) . I'm fortunate and don't require any donations myself. Let's make a difference together!
+
+# Readme from samltoawsstskeys
+
 Google Chrome Extension, which converts a SAML 2.0 assertion to AWS STS Keys (temporary credentials). Just log in to the AWS Web Management Console using your SAML IDP, and the Chrome Extension will fetch the SAML Assertion from the HTTP request. The SAML Assertion is then used to call the assumeRoleWithSAML API to create the temporary credentials. (AccessKeyId, SecretAccessKey and SessionToken).
 
 The Chrome Extension can be downloaded here:

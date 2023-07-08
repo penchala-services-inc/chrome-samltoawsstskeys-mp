@@ -8,20 +8,75 @@
   <body>
   <div id="divTitle">
     <div id="divIcon" class="inline-div"><img src="../icons/icon_128.png" alt="Icon" height="50" width="50"></div>
-    <div id="divHeader" class="inline-div"><h2>Options page for 'SAML to AWS STS Keys Converter'</h2></div>
+    <div id="divHeader" class="inline-div"><h2>Options page for 'SAML to AWS STS Keys Converter-Multi Profile'</h2></div>
   </div>
-  <hr>
-  
+  <hr>  
   <div id="divInfo">
-    <p>Developed by prolane.org (Gerard Laan)</p>
-    <p>For help, please see README at the <a href="https://github.com/prolane/samltoawsstskeys/blob/master/README.md" target="_blank">project page on Github.com</a></p>
+    <p>Developed by Penchala Services Inc. For help, please see README at the <a href="https://github.com/penchala-services-inc/chrome-samltoawsstskeys-mp/blob/master/README.md" target="_blank">project page on Github.com</a></p>
+    <p>Inspired from  SAML to AWS STS Keys Converter by prolane.org (Gerard Laan). For original idea go to <a href="https://github.com/prolane/samltoawsstskeys/blob/master/README.md" target="_blank">project page on Github.com</a></p>
   </div>
   
   <div id="divSettings">
-    <div id="divFilename" class="setting-part">
-      <label>Filename for writing the fetched AWS STS keys. File will be written to Chrome's download directory. Example filename: credentials</label>
+
+    <div id="divProfileNamingPattern" class="setting-part">
+
+      <label>KNOWN BUG - When adding key value/profile role pairs using add/del in different sections, values are added to the wrong section.</label><br>
+      <label>So for now add/delete key value/profile role pairs using add/del in one section, SAVE and repeat as needed.</label><br><br><br>
+
+      <label>Profile Naming Format</label><br>
+      <label>For instance: auto-{accountname}-{accountnumber}-{rolename}, system-generated-{accountname}-{accountnumber}-{rolename}-profile, and more.</label>
+        <label>Please keep in mind that {accountname}, {accountnumber}, and {rolename} are system variables, and they should be enclosed in {} to be replaced with their actual values.</label>
       <br />
-      <input type="text" name="FileName" id="FileName" size="40">
+      <input type="text" name="ProfileNamingPattern" id="ProfileNamingPattern" size="40">
+      <br /><br />
+    </div>
+    
+    <div id="divCredentialsFilename" class="setting-part">
+    
+      <label>Credentials File Configuration</label>
+      <label>Filename for storing the fetched AWS STS keys: aws/credentials. The file will be saved in the specified path within Chrome's download directory.</label>
+      <br />
+      <input type="text" name="CredentialsFilename" id="CredentialsFilename" size="40">
+      <br /><br />
+            
+
+      <label>Content to be included in the credentials file:</label><br>
+      <label>For roles in login page.</label><br>
+      <input type="radio" name="credentials-content-option" id="option1" value="selected" checked>
+      <label for="option1">1. Save key for the selected role in the login page only.</label><br>
+      
+      <input type="radio" name="credentials-content-option" id="option2" value="recent">
+      <label for="option2">2. Save keys for the recent (max 5) logged in roles from the login page along with the selected role.</label><br>
+      
+      <input type="radio" name="credentials-content-option" id="option3" value="custom">
+      <label for="option3">3. Save keys for following arns only along with selected role in the login page.</label><br>
+      <label>[OPTIONAL]</label>
+      <div id="filter_role_arns" class="inline-div">
+      </div>
+
+      <input type="radio" name="credentials-content-option" id="option4" value="all">
+      <label for="option4">4. Save keys for all roles in the login page. (NOT recommend for safety)</label><br>
+      
+      <hr><br>
+
+      <label>[OPTIONAL]</label><br>
+      <label>For roles outside of login page. <a href="https://github.com/prolane/samltoawsstskeys/issues/26" target="_blank">For clarifty on how this works check this out.</a></label><br>
+      <label>Specify a list of Role ARN's. For each role the plugin will call the assume-role API. The fetched AWS STS keys will be added to the output file as separate profiles.</label>
+      <div id="role_arns" class="inline-div">
+      </div>
+   
+    </div>
+
+    <div id="divConfigFilename" class="setting-part">
+      <label>Config File Configuration</label>
+      <label>Filename for storing less sensitive information on AWS profiles. The file will be saved in the specified path within Chrome's download directory.</label>
+      <br />
+      <input type="text" name="ConfigFilename" id="ConfigFilename" size="40"><br><br>
+
+      <label>[OPTIONAL]</label><br>
+      <label>You can provide a list of key-value pairs to include in the config file, along with AWS profiles.</label>
+      <div id="configs_extra_key_value_pairs" class="inline-div">
+      </div>
     </div>
 
     <div id="divSessionDuration" class="setting-part">
@@ -39,6 +94,8 @@
         <input type="text" name="CustomSessionDuration" id="CustomSessionDuration" size="40">
         <br><br>
       </div>
+
+
       <label>Enable DEBUG logs</label>
       <br />
       <select name="DebugLogs" id="DebugLogs">
@@ -46,14 +103,16 @@
         <option value="no">no</option>
       </select>
     </div>
-    
-    <div id="divRoles" class="setting-part">
-      <label>[OPTIONAL]</label><br>
-      <label>Specify a list of Role ARN's. For each role the plugin will call the assume-role API. The fetched AWS STS keys will be added to the output file as separate profiles.</label>
-      <div id="role_arns" class="inline-div">
+
+    <div id="divUIEnhancements" class="setting-part">
+      <label>Login Page UI Enhancement Settings</label>
+      <br>
+      <br>
+      <label>Terms and Color Matching in Account Names</label>
+      <div id="highlight_term_and_colors" class="inline-div">
       </div>
     </div>
-    
+       
     <div id="divSave">
       <div id="status" class="inline-div"></div>
       <button id="save">Save</button>

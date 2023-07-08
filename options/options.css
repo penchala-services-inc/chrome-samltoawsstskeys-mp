@@ -18,7 +18,7 @@ div {
   width: 900px;
   border-style: solid;
     border-radius: 10px;
-  background-color: #fef6e0;
+  background-color: #4B5320;
 }
 
 #divCustomSessionDuration {
@@ -39,7 +39,7 @@ div {
 .setting-part {
   width: 876px;
   border-radius: 10px;
-  background-color: #f1c47b;
+  background-color: #C4C7B6;
   margin-bottom: 14px;
 }
 
@@ -52,6 +52,18 @@ label {
 }
 
 #role_arns {
+  margin-top: 14px;
+}
+
+#highlight_term_and_colors {
+  margin-top: 14px;
+}
+
+#configs_extra_key_value_pairs {
+  margin-top: 14px;
+}
+
+#filter_role_arns {
   margin-top: 14px;
 }
 

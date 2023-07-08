@@ -1,0 +1,51 @@
+.saml-account .saml-account {
+    border: none;
+    box-shadow: none;
+	padding-top: 0;
+    margin-bottom: 5px;
+    align-items: center;
+    display: flex;
+}
+.saml-account {
+    margin-top: -20px;
+    margin-bottom: 5px;
+    display: -webkit-box;
+    align-items: center;
+     white-space: nowrap;
+      max-width: 100%;
+    
+
+
+}
+.saml-account-name {
+  display: table-caption;
+}
+
+.saml-radio {
+border-color: white;
+
+} 
+
+.css3button
+{
+font-size: 12px;
+padding: 5px 20px;
+}
+
+
+.css3button .css3button
+{
+font-size: 12px;
+padding: 5px 20px;
+}
+
+
+
+.saml-role.clickable-radio input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+  }
+
+  #container{
+    display: table;
+  }
