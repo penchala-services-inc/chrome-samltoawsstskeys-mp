@@ -4,17 +4,25 @@
 * New Features to Save Keys:
 
     Added option to save keys for recent role logins (up to a maximum of 5).
+
     Introduced the ability to save keys for user provided roles only.
+
     Implemented an option to save keys for all roles on the login page.
+
     Included a configuration (config) file for storing less sensitive information.
+
     Extended the configuration (config) file to support additional key-value pairs (like regionm cert_bundle,...).
 
 * Login Page Improvements:
 
     Added the option to configure accounts by color based on a specific term.
+
     Optimized the Login Page UI by removing the logo (option to restore it will be available in future updates).
+
     Aligned roles horizontally on the Login Page to prevent scrolling and reduce strain on engineers' hands, fingers, and wrists (option to revert to the previous layout will be available in future updates).
+
     Replaced radio buttons with role buttons on the Login Page to eliminate extra clicks and enhance user experience (option to switch back to radio buttons will be available in future updates).
+    
     Moved the Recent Logins section to the top of the Login Page and added the last login time for improved visibility.
 
 ## 2023-mar-20 (v3.3)
