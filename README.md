@@ -4,6 +4,10 @@ This extension is a forked version of the awesome "[samltoawsstskeys](https://gi
 
 The inspiration from "samltoawsstskeys" motivated me to develop "samltoawsstskeys-mp" that helps to save keys for mutiple roles with named profiles and some other login page enhancements.
 
+You can download it from [here](https://chrome.google.com/webstore/detail/saml-to-aws-sts-keys-conv/nhcoglopkiacbogcjdcbhooedkaddimi) in the chrome store.
+
+https://chrome.google.com/webstore/detail/saml-to-aws-sts-keys-conv/nhcoglopkiacbogcjdcbhooedkaddimi
+
 Options
 
 ![Alt text](images/options-mp.png "Options")
